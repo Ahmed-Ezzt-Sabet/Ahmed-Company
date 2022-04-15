@@ -1,0 +1,254 @@
+/*header style*/
+.header{
+	background-color: rgba(255, 255, 255, 0.7);
+	color: black;
+}
+.header a,
+.header .nav li a {
+	color: black;
+}
+
+
+/*breadcrumbs*/
+
+.breadcrumbs .page-title,
+.breadcrumbs .linkes{
+	width: 45%;
+	float: left;
+} 
+.breadcrumbs .linkes{
+	margin-top: 15px;
+	text-align: right;
+}
+.breadcrumbs .linkes a{
+	color: var(--mainColor);
+	transition: color 0.5s;
+
+}
+.breadcrumbs .linkes a.active{
+	color: var(--gray);
+}
+.breadcrumbs .linkes a:hover{
+	color: var(--btn-hover);
+}
+/*content style*/
+.content{
+	background-color:rgba(255, 255, 255, 0.7);
+	margin-top: -40px;
+	min-height: 100vh;
+}
+.main-content{
+	width: 70%;
+	float: left;
+	margin-right: 5%;
+}
+.main-content .img img {
+    width: 100%;
+}
+.img .item-information {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.text .title{
+	margin: 20px 0;
+}
+.text .desc{
+	margin-bottom: 40px;
+}
+.tags span{
+	font-weight: 600;
+	font-size: 17px;
+}
+.tags ul{
+	display: inline-block;
+}
+.tags ul li{
+	display: inline-block;
+	padding: 10px;
+	background-color: var(--gray-smoke);
+	cursor: pointer;
+	transition: background-color 0.5s;
+}
+.tags ul li:hover{
+	background-color:var(--gray) ;
+}
+.tags ul li i{
+	color: var(--mainColor);
+}
+.person-card {
+    padding: 20px;
+    border: 1px solid var(--gray-smoke);
+    overflow: hidden;
+    margin-top: 40px;
+}
+.person-card .img {
+    width: 20%;
+    float: left;
+    height: 100%;
+    margin: 0;
+}
+.person-info {
+    width: 80%;
+    float: left;
+}
+.person-card .img img {
+    width: 80%;
+}
+.person-card .info-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray);
+}
+.person-card .info-title ul li{
+	display: inline-block;
+}
+.person-card .info-title ul li i{
+	width: 30px;
+	height: 30px;
+	border-radius: 6px;
+	line-height: 30px;
+	color: var(--white);
+	background-color: var(--mainColor);
+	text-align: center;
+	margin-bottom: 10px;
+	transition: background-color 0.5s;
+	cursor: pointer;
+}
+.person-card .info-title ul li i:hover{
+	background-color:var(--btn-hover) ;
+}
+.person-card p.info-desc {
+    margin-top: 20px;
+    color: var(--gray);
+}
+.main-title{
+	margin: 30px 0 15px 0;
+	text-transform: uppercase;  
+}
+.line {
+    display: block;
+    margin-top: -6px;
+    width: 40px;
+    height: 4px;
+    background-color: var(--mainColor);
+}
+.comments-section{
+	border: 1px solid var(--gray);
+	padding: 20px;
+	margin: 20px 0;
+}
+.comment-item {
+	overflow: hidden;
+	margin-bottom: 20px;
+	border-bottom: 1px solid var(--gray);
+	padding-bottom: 15px;
+}
+.comment-item.active {
+	border: 2px solid var(--mainColor);
+	background-color: var(--gray-smoke);
+	padding: 20px;
+}
+.comment-item.active .comment-item-title{
+	color: var(--mainColor);
+}
+.comment-item .img{
+	width: 20%;
+	float: left;
+}
+.comment-item .img img{
+	width: 80%;
+}
+.comment-item .info-title{
+	width: 80%;
+	float: left;
+	display: flex;
+	justify-content: space-between;
+}
+.info-title a {
+    color: var(--mainColor);
+    font-size: 14px;
+}
+
+.comment-item-title span {
+    font-size: 14px;
+    color: var(--gray);
+    font-weight: 500;
+    margin-left: 5px;
+}
+.comment-item .desc {
+    margin-top: 40px;
+    font-size: 16px;
+}
+form{
+	margin: 0;
+}
+textarea{
+	width: 100%;
+	height: 100px;
+}
+input[type="submit"]{
+	margin: 20px 0;
+	width: 100px;
+}
+
+/* aside style */
+.aside{
+	width: 25%;
+	float: left;
+}
+.search{
+	position: relative;
+}
+input[name="search"] {
+    width: 100%;
+}
+i.fa.fa-search {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--mainColor);
+    font-size: 17px;
+    cursor: pointer;
+}
+/*category*/
+.category li {
+    font-size: 14px;
+    padding: 5px;
+    border-top: 1px solid var(--gray);
+    display: flex;
+    justify-content: space-between;
+}
+.category li span{
+	color: var(--mainColor);
+}
+/*populare posts*/
+.post {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.post .img {
+    width: 35%;
+    margin-right: 5%;
+}
+.post .img img {
+    width: 100%;
+}
+.post-info{
+	width: 60%;
+}
+.post-info .title {
+    margin-bottom: 5px;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.post-info .desc {
+    color: var(--mainColor);
+    font-size: 14px;
+}
+/*tags-section*/
+.tags-section .tags ul li{
+	margin: 2px;
+}

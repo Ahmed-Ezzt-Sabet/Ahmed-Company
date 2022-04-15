@@ -1,0 +1,232 @@
+/* my framwork */
+.countainer {
+    width: 80%;
+    margin: auto;
+}
+
+.clearfloat {
+    clear: both;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center-ab {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(43 43 43 / 50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98vh;
+    z-index: 2;
+}
+
+.opacity-effect:hover {
+    opacity: 0.8;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title .title {
+    font-size: 30px;
+    margin: auto;    
+    margin-bottom: 10px;
+    border: 1px solid #111;
+    width: fit-content;
+    padding:10px;
+    position: relative;
+    z-index: 1;
+    transition:color 0.9s,border 0.9s,transform 0.9s,letter-spacing 0.9s;
+}
+.section-title .title:hover {
+    animation: scale 0.5s ease-in-out infinite;
+}
+
+.section-title .title::after,
+.section-title .title::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background-color: var(--mainColor);
+    border-radius:50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s;   
+    transition-delay:0.3s;
+}
+.section-title .title::before {
+    left: -30px;
+}
+.section-title .title::after{
+    right: -30px;
+}
+.section-title .title:hover::before{
+    z-index: -1;
+    animation: left-move 0.7s linear forwards;
+}
+.section-title .title:hover::after{
+    z-index: -1;
+    animation: right-move 0.7s linear forwards;
+}
+.section-title .title:hover{
+    color: var(--white);
+    border: 1px solid var(--mainColor);
+    border-radius: 6px;
+
+}
+.b-b{
+    border-bottom: 1px solid var(--gray);
+}
+
+.pd-y {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+}
+
+.mg-5 {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.mg-b-5 {
+    margin-bottom: 5px;
+}
+
+.mg-r-10 {
+    margin-right: 10%;
+}
+
+.height-70 {
+    height: 70vh;
+}
+
+.ltr-affect::after,
+.ttb-affect::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+
+.ltr-affect::after {
+    width: 0%;
+    height: 100%;
+    transition: width 0.5s;
+}
+
+.ltr-affect:hover::after {
+    width: 100%;
+}
+
+.ltr-affect:hover .ltr-affect-title,
+.ltr-affect:hover a {
+    color: whitesmoke;
+}
+
+.ltr-affect a {
+    color: black;
+    transition: color 0.5s;
+}
+
+.ttb-affect {
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+.ttb-affect:hover::after {
+    height: 100%;
+}
+
+.ttb-affect::after {
+    width: 100%;
+    height: 0;
+    transition: height 0.5s;
+}
+
+.ttb-affect:hover {
+    color: white;
+}
+.btn{
+    display: flex;
+    align-items:center;
+}
+
+input[type="submit"]:hover,
+.blue:hover {
+    background-color: var(--btn-hover);
+    color: var(--white)!important;
+}
+.white:hover{
+    color: var(--white)!important;
+    background-color: var(--mainColor);
+}
+textarea::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*========section title animation==========*/
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+     }
+    100% {
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+    }
+
+}
+@keyframes right-move{
+     50% {
+        right: 0;
+        width: 12px;
+    }
+    100% {
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+    }
+
+}
+@keyframes scale {
+    50%{
+        transform: scalex(1.2);
+    }
+    100%{
+        transform: scalex(1.0);
+    }
+}
